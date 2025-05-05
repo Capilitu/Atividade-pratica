@@ -20,4 +20,4 @@ mongoose.connect('mongodb+srv://despacittogta:Bicicleta2008@cluster0.aunkiug.mon
 .then(() => console.log('✅ Conectado ao MongoDB Atlas'))
 .catch(err => console.error('❌ Erro ao conectar no MongoDB Atlas:', err));
 
-app.listen(3000, () => console.log('Servidor rodando na porta 3000'));
+app.listen(3000, () => console.log('Servidor rodando na porta 3000(http://localhost:3000/)'));
