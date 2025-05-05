@@ -1,0 +1,35 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API - Gerenciador de Tarefas",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/tasks": {
+      "get": {
+        "summary": "Listar todas as tarefas",
+        "responses": { "200": { "description": "Sucesso" } }
+      },
+      "post": {
+        "summary": "Criar nova tarefa",
+        "responses": { "201": { "description": "Criado com sucesso" } }
+      }
+    },
+    "/api/tasks/{id}": {
+      "get": {
+        "summary": "Buscar tarefa por ID",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": { "200": { "description": "Sucesso" } }
+      },
+      "delete": {
+        "summary": "Excluir tarefa",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": { "204": { "description": "Removido" } }
+      }
+    }
+  }
+}
